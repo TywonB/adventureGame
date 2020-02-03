@@ -1,0 +1,75 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.container {
+    position: absolute;
+    width: 500px;
+    height: 465px;
+    max-width: 80%;
+    background: burlywood;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.btnGrid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.btn {
+    background: burlywood;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.btn:hover {
+    background: grey;
+}
+
+#text {
+    line-height: 1.25;
+}
+
+#canvas {
+    position: absolute;
+    bottom: 90px;
+    left: 15px;
+}
+
+.bg {
+    position: absolute;
+    background: url(../media/bgImage.png);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    animation: animate 110s linear infinite;
+}
+
+@keyframes animate {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
